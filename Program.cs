@@ -49,7 +49,68 @@ Show2dArray (newRealArray);
 // 8 4 2 4
 // 1 7 -> такого числа в массиве нет
 
+/* 
+int [,] Create2dArray ()
+{
+    Console.Write ("Input number of rows: ");
+    int rows = Convert.ToInt32 (Console.ReadLine());
+    Console.Write ("Input number of column: ");
+    int columns = Convert.ToInt32 (Console.ReadLine());
+    Console.Write ("Input min possible value: ");
+    int minValue = Convert.ToInt32 (Console.ReadLine());
+    Console.Write ("Input max possible value: ");
+    int maxValue = Convert.ToInt32 (Console.ReadLine());
 
+    int [,] createdArray = new int [rows, columns];
+
+    for (int i = 0; i < rows; i++)
+        for ( int j = 0; j < columns; j++)
+            createdArray [i,j] = new Random().Next(minValue, maxValue + 1);
+
+    return createdArray;
+}
+
+void Show2dArray (int [,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for ( int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write (array[i,j] + " ");
+        }
+        Console.WriteLine ();
+    }
+    Console.WriteLine ();
+}
+
+
+bool CheckIndex (int index1, int index2, int [,] array)
+{
+    if (index1 >= array.GetLength(0) || index1 < 0 || index2 >= array.GetLength(1) || index2 < 0) return false;
+    else return true;
+}
+
+int [,] newArray = Create2dArray ();
+Console.WriteLine ();
+Console.WriteLine("Two-dimensional array:");
+Show2dArray (newArray);
+
+Console.Write("Input number array row: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input number array column: ");
+int num2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine ();
+
+bool result = CheckIndex (num1, num2, newArray);
+if (result)
+{
+    Console.WriteLine($"Value of array element [{num1}, {num2}] = {newArray [num1, num2]}.");
+}
+else
+{
+    Console.WriteLine($"Value of array element [{num1}, {num2}] does not exist.");
+}
+ */
 
 // Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 // Например, задан массив:
