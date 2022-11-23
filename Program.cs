@@ -58,4 +58,73 @@ Show2dArray (newRealArray);
 // 8 4 2 4
 // Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
 
+/* 
+int [,] Create2dArray ()
+{
+    Console.Write ("Input number of rows: ");
+    int rows = Convert.ToInt32 (Console.ReadLine());
+    Console.Write ("Input number of column: ");
+    int columns = Convert.ToInt32 (Console.ReadLine());
+    Console.Write ("Input min possible value: ");
+    int minValue = Convert.ToInt32 (Console.ReadLine());
+    Console.Write ("Input max possible value: ");
+    int maxValue = Convert.ToInt32 (Console.ReadLine());
 
+    int [,] createdArray = new int [rows, columns];
+
+    for (int i = 0; i < rows; i++)
+        for ( int j = 0; j < columns; j++)
+            createdArray [i,j] = new Random().Next(minValue, maxValue + 1);
+
+    return createdArray;
+}
+
+void Show2dArray (int [,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for ( int j = 0; j < array.GetLength(1); j++)
+        {
+            Console.Write (array[i,j] + " ");
+        }
+        Console.WriteLine ();
+    }
+    Console.WriteLine ();
+}
+
+double [] ArithmeticMeanArray (int [,] arr)
+{
+    double [] arMeanArray = new double [arr.GetLength(1)];
+    double sum = 0;
+
+    for (int j = 0; j < arr.GetLength(1); j++)
+    {
+        for (int i = 0; i < arr.GetLength(0); i++)
+        {
+        sum += arr [i,j];
+        }
+        arMeanArray [j] = Math.Round (sum / arr.GetLength(0), 2);
+        sum = 0;
+    }
+        return arMeanArray;
+}
+
+void ShowArray (double [] array)
+{
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write ($"{array[i]}; ");
+    }
+    Console.WriteLine("\b\b]");
+}
+
+int [,] newArray = Create2dArray ();
+Console.WriteLine ();
+Console.WriteLine("Two-dimensional array:");
+Show2dArray (newArray);
+
+double [] array = ArithmeticMeanArray (newArray);
+Console.WriteLine("Arithmetic mean of each array column:");
+ShowArray (array);
+ */
